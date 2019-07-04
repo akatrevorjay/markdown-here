@@ -7,9 +7,13 @@
     "file": "*",
     "glob": "^7.1.2",
     "markdown-it": "~3.0.5",
-    "metascript": "~1.0.0"
+    "metascript": "~1.0.0",
+    "snyk": "^1.189.0"
   },
   "scripts": {
-    "build": "node build.js"
-  }
+    "build": "node build.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
